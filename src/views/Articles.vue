@@ -1,5 +1,6 @@
 <template>
-  <router-view></router-view>
+  <el-button> I am ElButton </el-button>
+  hoge
 </template>
 
 <script lang="ts">
@@ -7,7 +8,7 @@ import { defineComponent } from 'vue';
 import { ElButton } from 'element-plus';
 
 export default defineComponent({
-  name: 'app',
+  name: 'Articles',
   components: {
     ElButton,
   },
