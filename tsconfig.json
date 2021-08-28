@@ -8,19 +8,13 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "lib": [
-      "esnext",
-      "dom"
-    ],
-    "types": [
-      "node",
-      "jest"
-    ],
+    // for vue template
+    "skipLibCheck": true,
+    "lib": ["esnext", "dom"],
+    "types": ["node", "jest"],
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "src/*"
-      ]
+      "@/*": ["./src/*"]
     }
   },
   "include": [
@@ -29,9 +23,7 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "src/**/*.ts",
-    "tests/**/*.d.ts",
+    "tests/**/*.d.ts"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }
