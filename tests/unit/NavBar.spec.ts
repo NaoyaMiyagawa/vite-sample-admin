@@ -3,7 +3,7 @@ import NavBar from '@/components/NavBar.vue';
 
 describe('NavBar.vue', () => {
   const wrapper = mount(NavBar, {
-    props: {},
+    props: { isCollapsed: false },
     shallow: true,
   });
 
@@ -19,16 +19,15 @@ describe('NavBar.vue', () => {
     expect(wrapper.text()).toContain('Articles CMS');
   });
 
-  it('shows page name', () => {
+  it('shows notification icon', () => {
     expect(wrapper.html()).toContain('<notification-stub');
   });
 
-  it('shows page name', () => {
+  it('shows logut button', () => {
     expect(wrapper.text()).toContain('Logout');
   });
 
-  // - [ ] サイドバーのトグルボタンを表示させる
-  it('shows sidebar toggle button', () => {
-    expect(wrapper.text()).toContain('expand');
+  it('shows fold button when navbar is not collapsed', () => {
+    expect(wrapper.html()).toContain('el-icon-s-fold');
   });
 });

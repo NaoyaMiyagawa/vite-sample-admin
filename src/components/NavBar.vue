@@ -1,25 +1,25 @@
 <script setup lang="ts">
 import { System } from '@/consts/system';
 import { Notification } from '@element-plus/icons';
-import { ref } from '@vue/reactivity';
+
+defineProps({
+  isCollapsed: { type: Boolean, required: true },
+});
+defineEmits(['toggle-side-bar']);
 
 const loginUserName = 'Jedrich';
 const pageName = 'Articles CMS';
-const isCollapse = ref(true);
-const circleUrl =
-  'https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png';
+const circleUrl = 'https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png';
 const activeIndex = '1';
 </script>
 
 <template>
   <el-menu :default-active="activeIndex" class="flex" mode="horizontal">
     <div class="flex">
-      <div class="m-auto px-4">
-        <el-radio-group v-model="isCollapse">
-          <el-radio-button :label="false">expand</el-radio-button>
-          <el-radio-button :label="true">collapse</el-radio-button>
-        </el-radio-group>
-      </div>
+      <el-menu-item index class="px-4" @click="$emit('toggle-side-bar')">
+        <i :class="[isCollapsed ? 'el-icon-s-unfold' : 'el-icon-s-fold']" />
+      </el-menu-item>
+
       <div class="m-auto ml-4">{{ System.name }} - {{ pageName }}</div>
     </div>
 
@@ -38,7 +38,7 @@ const activeIndex = '1';
 
       <el-sub-menu index class="mr-6">
         <template #title>
-          <el-avatar :size="40" :src="circleUrl" class="align-middle mr-4" />
+          <el-avatar :size="40" :src="circleUrl" class="mr-4 align-middle" />
         </template>
         <el-menu-item index="2-1">Profile</el-menu-item>
         <el-menu-item index="2-2">Settings</el-menu-item>

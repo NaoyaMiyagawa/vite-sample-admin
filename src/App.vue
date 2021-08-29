@@ -3,11 +3,14 @@ import { ref } from '@vue/reactivity';
 import NavBar from '@/components/NavBar.vue';
 import SideBar from '@/components/SideBar.vue';
 
-const isCollapsed = ref(false);
+let isCollapsed = ref(false);
+const toggleSideBar = () => {
+  isCollapsed.value = !isCollapsed.value;
+};
 </script>
 
 <template>
-  <NavBar />
+  <NavBar :is-collapsed="isCollapsed" @toggle-side-bar="toggleSideBar" />
   <div class="flex">
     <SideBar :is-collapsed="isCollapsed" />
     <div class="flex-grow">

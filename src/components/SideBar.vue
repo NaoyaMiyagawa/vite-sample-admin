@@ -1,10 +1,6 @@
 <script setup lang="ts">
 defineProps({
-  isCollapsed: {
-    type: Boolean,
-    reqired: true,
-    default: false,
-  },
+  isCollapsed: { type: Boolean, reqired: true },
 });
 </script>
 
@@ -31,7 +27,7 @@ defineProps({
 
     <!-- Users -->
     <el-menu-item index="3">
-      <i class="el-icon-menu"></i>
+      <i class="el-icon-user"></i>
       <span>Users</span>
     </el-menu-item>
   </el-menu>
