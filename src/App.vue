@@ -1,8 +1,17 @@
 <script setup lang="ts">
-import NavBar from './components/NavBar.vue';
+import { ref } from '@vue/reactivity';
+import NavBar from '@/components/NavBar.vue';
+import SideBar from '@/components/SideBar.vue';
+
+const isCollapsed = ref(false);
 </script>
 
 <template>
   <NavBar />
-  <router-view />
+  <div class="flex">
+    <SideBar :is-collapsed="isCollapsed" />
+    <div class="flex-grow">
+      <router-view />
+    </div>
+  </div>
 </template>
