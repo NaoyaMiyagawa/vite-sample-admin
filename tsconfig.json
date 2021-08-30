@@ -14,11 +14,14 @@
     "types": ["node", "jest"],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@views/*": ["./src/views/*"]
     },
     "outDir": "./dist"
   },
   "include": [
+    //
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.tsx",

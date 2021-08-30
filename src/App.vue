@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from '@vue/reactivity';
-import NavBar from '@/components/NavBar.vue';
-import SideBar from '@/components/SideBar.vue';
+import NavBar from '@components/NavBar.vue';
+import SideBar from '@components/SideBar.vue';
 
 let isCollapsed = ref(false);
 const toggleSideBar = () => {

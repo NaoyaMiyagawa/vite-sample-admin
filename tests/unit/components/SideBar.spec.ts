@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils';
-import SideBar from '@/components/SideBar.vue';
+import SideBar from '@components/SideBar.vue';
 
 describe('SideBar.vue', () => {
   it('should not collapse at first', () => {
