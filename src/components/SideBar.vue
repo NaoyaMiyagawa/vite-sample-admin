@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ElMenu, ElMenuItem } from 'element-plus';
 defineProps({
   isCollapsed: { type: Boolean, reqired: true },
 });

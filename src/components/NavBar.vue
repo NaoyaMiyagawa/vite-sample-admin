@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { System } from '@/consts/system';
+import { ElMenu, ElSubMenu, ElMenuItem, ElIcon, ElAvatar } from 'element-plus';
 import { Notification } from '@element-plus/icons';
 import { computed } from '@vue/reactivity';
 import { useRoute } from 'vue-router';
