@@ -14,7 +14,7 @@ const route = useRoute();
 
 const { headerTitle } = (() => {
   const pageName = computed(() => route.name);
-  const headerTitle = computed(() => `${System.name} - ${pageName.value}`);
+  const headerTitle = computed(() => `${System.name} - ${String(pageName.value)}`);
   return { headerTitle };
 })();
 
@@ -38,9 +38,9 @@ const activeIndex = '1';
 
     <div class="flex">
       <el-menu-item index class="px-2">
-        <el-svg-icon class="inline-block">
+        <el-icon class="inline-block">
           <notification class="w-6" />
-        </el-svg-icon>
+        </el-icon>
       </el-menu-item>
 
       <el-menu-item index>
